@@ -1,6 +1,30 @@
 <!DOCTYPE html>
 
-<head></head>
+<head>
+    <script>
+        function date_dif() {
+            const oneDay = 24 * 60 * 60 * 1000;
+            // const datenow = new Date();
+            const date = new Date(document.getElementById("pick_date").value);
+            const date2 = new Date(document.getElementById("pick_date2").value);
+
+            const datediff = Math.round(Math.abs((date - date2) / oneDay));
+
+            alert(datediff);
+        }
+    </script>
+    <!-- <script>
+        function checkDifference() {
+            const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+            const firstDate = new Date(document.getElementById('dateInput').value);
+            const secondDate = new Date(document.getElementById('dateInput2').value);
+
+            const diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay));
+
+            alert(diffDays);
+        }
+    </script> -->
+</head>
 
 <body>
     <h4>Surya Susila</h4>
@@ -9,4 +33,10 @@
         <li>Aplikasi Web</li>
         <li>Aplikasi Web</li>
     </ul>
+    <label for="birthday">Date:</label>
+    <input type="date" id="pick_date" name="pickdate">
+    <input type="button" onclick="date_dif()" value="Display">
+    <br/>
+    <label for="birthday">Date:</label>
+    <input type="date" id="pick_date2" name="pickdate2">
 </body>
